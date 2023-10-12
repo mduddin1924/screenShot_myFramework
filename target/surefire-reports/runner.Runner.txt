@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: runner.Runner
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 80.073 s <<< FAILURE! - in runner.Runner
+CustomerLoginFunctionality.Verify Customer Login Functionality  Time elapsed: 25.814 s  <<< FAILURE!
+org.assertj.core.api.SoftAssertionError: 
+
+The following 2 assertions failed:
+1) expected:<...elcome to MicroTech [na......]."> but was:<...elcome to MicroTech [NA].">
+2) expected:<"[Failed] David"> but was:<"[Welcome] David">
+
+
+EmployeeLoginFunctionality.Verify Employee Login Functionality  Time elapsed: 10.58 s  <<< FAILURE!
+org.assertj.core.api.SoftAssertionError: 
+
+The following 2 assertions failed:
+1) expected:<"Your One Stop Sol[]ution"> but was:<"Your One Stop Sol[o]ution">
+2) expected:<"[Your one Stop solution]"> but was:<"[Employee Id: 102]">
+
+
