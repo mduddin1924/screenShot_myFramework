@@ -23,7 +23,7 @@ public class Employee_LoginFunctionality extends Base {
 
         navigate("http://it.microtechlimited.com");
         String s = getText(Landing_Page.wrongSlogan);
-        soft.assertThat(s).isEqualTo("Your One Stop Solution");
+        soft.assertThat(s).isEqualTo("Your One Stop Soloution");
         screenShot(driver,"Assertion Error");
         Thread.sleep(2000);
     }
@@ -73,7 +73,7 @@ public class Employee_LoginFunctionality extends Base {
         //assertEquals("Welcome Test", welcomeMsg);
         // Third Party Assertion
         String statusId = getText(Employee_HomePage.employeeIdStatus);
-        soft.assertThat(statusId).isEqualTo("Your one Stop solution");
+        soft.assertThat(statusId).isEqualTo("Employee Id: 102");
         screenShot(driver,"Error assertions");
 
         soft.assertAll();

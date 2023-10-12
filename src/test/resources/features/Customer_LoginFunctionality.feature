@@ -1,4 +1,4 @@
-@Customer
+@Sanity
 Feature: CustomerLoginFunctionality
 
   Description:

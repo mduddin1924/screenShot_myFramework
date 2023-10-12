@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinitions"},
         //strict = true, // strict exception posted on console
         //tags = {"@Employee or @Customer"},
-        tags = {"@Sanity005"},
+        tags = {"@Sanity"},
         monochrome = false,
         dryRun = false,
         plugin = {"pretty", "html:test-output", "json:target/cucumber-report/cucumber.json"}

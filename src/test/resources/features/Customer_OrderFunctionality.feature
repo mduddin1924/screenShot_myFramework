@@ -7,7 +7,7 @@ Feature: CustomerOrderFunctionality
   So that I can see Customer Home Page And Product Order Menu
 
 
-  Scenario: Verify Customer Order Functionality
+  Scenario Outline: Verify Customer Order Functionality
     Given I am in Landing Page
     Then I click on Login Menu
     And I click on Customer Login Menu
@@ -22,6 +22,9 @@ Feature: CustomerOrderFunctionality
     When I Click Confirm Customer Product
     And I Confirmed Customer Product
     And I logout From Customer Order List
+
+  Examples:
+  |userId
 
 
 

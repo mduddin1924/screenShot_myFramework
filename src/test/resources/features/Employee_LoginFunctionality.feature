@@ -1,4 +1,4 @@
-@Sanity005
+@Sanity
 Feature: EmployeeLoginFunctionality
 
   Description:
