@@ -14,14 +14,14 @@ public class Customer_OrderFunctionality extends Base {
 
     @When("I Click on Customer order Product Menu")
     public void i_Click_on_Customer_order_Product_Menu() throws InterruptedException {
-       click(Customer_HomePage.productMenu);
-       Thread.sleep(1000);
+        click(Customer_HomePage.productMenu);
+        Thread.sleep(1000);
     }
 
     @Then("I Use Customer Product Name")
     public void i_Use_Customer_Product_Name() throws InterruptedException {
-       dropDownIndex(Customer_ProductOrderPage.productName,9);
-       Thread.sleep(1000);
+        dropDownIndex(Customer_ProductOrderPage.productName,9);
+        Thread.sleep(1000);
     }
 
     @Then("I Enter Customer order date")
@@ -39,15 +39,15 @@ public class Customer_OrderFunctionality extends Base {
 
     @When("I Click Confirm Customer Product")
     public void i_Confirm_Product() throws InterruptedException {
-      click(Customer_OrderListPage.orderConfirm);
+        click(Customer_OrderListPage.orderConfirm);
         Thread.sleep(1000);
 
     }
 
     @And("I Confirmed Customer Product")
     public void i_Confirmed_Customer_Product() {
-       String confirmedStatus = getText(Customer_OrderListPage.confirmedOrder);
-       assertEquals("Confirmed",confirmedStatus);
+        String confirmedStatus = getText(Customer_OrderListPage.confirmedOrder);
+        assertEquals("Confirmed",confirmedStatus);
     }
     @And("I logout From Customer Order List")
     public void i_logout_From_Customer_Order_List() {

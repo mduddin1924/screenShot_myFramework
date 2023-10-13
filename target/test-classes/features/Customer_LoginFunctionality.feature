@@ -25,9 +25,6 @@ Feature: CustomerLoginFunctionality
     | arif@gmail.com   | 1234     | 04   | Invalid username or password! |
 
 
-
-
-
       #Gherkin Language -
 #which has few keywords ie. Feature, Scenario, Given, When, Then, And, *
 #Given - Precondition

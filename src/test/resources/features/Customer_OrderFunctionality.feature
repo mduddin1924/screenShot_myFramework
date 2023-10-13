@@ -1,4 +1,4 @@
-@Customer
+
 Feature: CustomerOrderFunctionality
 
   Description:
@@ -10,11 +10,11 @@ Feature: CustomerOrderFunctionality
   Scenario Outline: Verify Customer Order Functionality
     Given I am in Landing Page
     Then I click on Login Menu
-    And I click on Customer Login Menu
-    And I Enter Customer User Id
-    And I Enter Customer User Password
+    Then I click on Customer Login Menu
+    Then I Enter Customer User Id "<userId>"
+    Then I Enter Customer User Password "<password>"
     When I click on Customer Login Button
-    Then Verify I am In Customer Home Page
+    Then I can see the "<user>" "<message>"
     When I Click on Customer order Product Menu
     Then I Use Customer Product Name
     Then I Enter Customer order date
@@ -23,8 +23,10 @@ Feature: CustomerOrderFunctionality
     And I Confirmed Customer Product
     And I logout From Customer Order List
 
-  Examples:
-  |userId
+    Examples:
+      | userId           | password | user | message                       |
+      | david@gmail.com  | 1234     | 01   | Welcome David                 |
+
 
 
 
