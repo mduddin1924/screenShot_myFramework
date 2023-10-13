@@ -40,17 +40,17 @@ public class Employee_LoginFunctionality extends Base {
         click(Employee_LoginPage.employeeLoginMenu);
     }
 
-    @Then("I Enter Employee User Id")
-    public void i_enter_employee_user_id() throws InterruptedException {
+    @Then("I Enter Employee User Id {string}")
+    public void i_Enter_Employee_User_Id(String userId) throws InterruptedException {
 
-        sendKeys(Employee_LoginPage.employeeUserId, "testpilot@gmail.com");
+        sendKeys(Employee_LoginPage.employeeUserId,userId);
         Thread.sleep(1000);
     }
 
-    @Then("I Enter Employee Password")
-    public void i_enter_employee_password() throws InterruptedException {
+    @Then("I Enter Employee Password {string}")
+    public void i_Enter_Employee_Password(String password) throws InterruptedException {
 
-        sendKeys(Employee_LoginPage.employeePassword, "1234");
+        sendKeys(Employee_LoginPage.employeePassword,password);
         Thread.sleep(1000);
     }
 
@@ -67,23 +67,23 @@ public class Employee_LoginFunctionality extends Base {
 
     }
 
-    @Then("Verify I am In Employee Home Page")
-    public void verify_i_am_in_employee_home_page() throws IOException {
+    @Then("I can see employee {string} and {string}")
+    public void i_can_see_employee_and(String number, String message) throws IOException {
         //String welcomeMsg = getText(Employee_HomePage.employeeWelcomeMsg);
         //assertEquals("Welcome Test", welcomeMsg);
         // Third Party Assertion
-        String statusId = getText(Employee_HomePage.employeeIdStatus);
-        soft.assertThat(statusId).isEqualTo("Employee Id: 102");
-        screenShot(driver,"Error assertions");
-
+        if(number.contains("01")) {
+            String statusId = getText(Employee_HomePage.employeeIdStatus);
+            soft.assertThat(statusId).isEqualTo(message);
+            screenShot(driver, "Error assertions");
+        }
+        else {
+            System.out.println("fail");
+        }
         soft.assertAll();
 
 
-    }
 
-    @And("I Logout from Employee Home Page")
-    public void i_Logout_from_Employee_Home_Page() {
-        click(Employee_HomePage.logOut);
 
 
 

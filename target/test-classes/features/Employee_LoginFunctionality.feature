@@ -7,15 +7,18 @@ Feature: EmployeeLoginFunctionality
   So that I can see Employee Home Page
 
 
-  Scenario: Verify Employee Login Functionality
+  Scenario Outline: Verify Employee Login Functionality
     Given I See Landing Page
     Then I Press on Login Menu
     Then I click Employee Login Menu
-    And I Enter Employee User Id
-    And I Enter Employee Password
+    And I Enter Employee User Id "<userId>"
+    And I Enter Employee Password "<password>"
     When I click on Employee Login Button
-    Then Verify I am In Employee Home Page
-    And I Logout from Employee Home Page
+    Then I can see employee "<number>" and "<message>"
+
+    Examples:
+      | userId              | password | number | message          |
+      | testpilot@gmail.com | 1234     | 01     | Employee Id: 102 |
 
 
     #Gherkin Language -

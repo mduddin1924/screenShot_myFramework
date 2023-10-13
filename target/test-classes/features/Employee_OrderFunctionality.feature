@@ -8,14 +8,14 @@ Feature: EmployeeOrderFunctionality
 
 
 
-  Scenario: Verify Employee Order Functionality
-    Given I am in Landing Page
+  Scenario Outline: Verify Employee Order Functionality
+    Given I See Landing Page
     Then I Press on Login Menu
     Then I click Employee Login Menu
-    Then I Enter Employee User Id
-    Then I Enter Employee Password
+    And I Enter Employee User Id "<userId>"
+    And I Enter Employee Password "<password>"
     When I click on Employee Login Button
-    Then Verify I am In Employee Home Page
+    Then I can see employee "<number>" and "<message>"
     Then I click Employee Product Order Menu
     When I Choose Employee Product Name
     Then I Put Employee Order Date
@@ -23,6 +23,10 @@ Feature: EmployeeOrderFunctionality
     When I confirm Employee Order Product
     Then I confirmed Employee Order Product
     And I logout From Employee Order List
+
+    Examples:
+      | userId              | password | number | message          |
+      | testpilot@gmail.com | 1234     | 01     | Employee Id: 102 |
 
 
      #Gherkin Language -
