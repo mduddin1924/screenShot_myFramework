@@ -20,13 +20,13 @@ public class Employee_OrderFunctionality extends Base {
 
     @When("I Choose Employee Product Name")
     public void i_Choose_Employee_Product_Name() throws InterruptedException {
-      dropDownIndex(Employee_ProductOrderPage.productName,8);
+      dropDownIndex(Employee_ProductOrderPage.productName,5);
         Thread.sleep(1000);
     }
 
     @Then("I Put Employee Order Date")
     public void i_Put_Employee_Order_Date() throws InterruptedException {
-      sendKeys(Employee_ProductOrderPage.orderDate,"07/01/2023");
+      sendKeys(Employee_ProductOrderPage.orderDate,"10/11/2023");
         Thread.sleep(1000);
     }
 

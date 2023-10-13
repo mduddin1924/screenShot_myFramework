@@ -12,14 +12,16 @@ Feature: EmployeeLoginFunctionality
     Then I Press on Login Menu
     Then I click Employee Login Menu
     And I Enter Employee User Id "<userId>"
-    And I Enter Employee Password "<password>"
+    And I Enter Employee Password "<passCode>"
     When I click on Employee Login Button
     Then I can see employee "<number>" and "<message>"
 
     Examples:
-      | userId              | password | number | message          |
-      | testpilot@gmail.com | 1234     | 01     | Employee Id: 102 |
-
+      | userId                  | passCode | number | message                       |
+      | testpilot@gmail.com     | 1234     | 01     | Employee Id: 102              |
+      | southAfrica@hotmail.com | 3856     | 02     | Invalid username or password! |
+      | newZealand@yahoo.com    | 0990     | 03     | Invalid username or password! |
+      | pakistan@worldCup.com   | 1992     | 04     | Invalid username or password! |
 
     #Gherkin Language -
 #which has few keywords ie. Feature, Scenario, Given, When, Then, And, *

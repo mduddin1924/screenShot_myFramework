@@ -13,7 +13,7 @@ Feature: EmployeeOrderFunctionality
     Then I Press on Login Menu
     Then I click Employee Login Menu
     And I Enter Employee User Id "<userId>"
-    And I Enter Employee Password "<password>"
+    And I Enter Employee Password "<passCode>"
     When I click on Employee Login Button
     Then I can see employee "<number>" and "<message>"
     Then I click Employee Product Order Menu
@@ -25,7 +25,7 @@ Feature: EmployeeOrderFunctionality
     And I logout From Employee Order List
 
     Examples:
-      | userId              | password | number | message          |
+      | userId              | passCode | number | message          |
       | testpilot@gmail.com | 1234     | 01     | Employee Id: 102 |
 
 

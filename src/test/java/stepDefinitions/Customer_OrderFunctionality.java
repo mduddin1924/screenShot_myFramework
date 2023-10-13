@@ -20,13 +20,13 @@ public class Customer_OrderFunctionality extends Base {
 
     @Then("I Use Customer Product Name")
     public void i_Use_Customer_Product_Name() throws InterruptedException {
-        dropDownIndex(Customer_ProductOrderPage.productName,9);
+        dropDownIndex(Customer_ProductOrderPage.productName,2);
         Thread.sleep(1000);
     }
 
     @Then("I Enter Customer order date")
     public void i_Enter_Customer_order_date() throws InterruptedException {
-        sendKeys(Customer_ProductOrderPage.orderDate,"07/06/2023");
+        sendKeys(Customer_ProductOrderPage.orderDate,"10/12/2023");
         Thread.sleep(1000);
 
     }
