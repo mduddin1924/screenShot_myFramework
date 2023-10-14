@@ -7,7 +7,6 @@ Feature: EmployeeOrderFunctionality
   So that I can see Employee Home Page and Product Order Menu
 
 
-
   Scenario Outline: Verify Employee Order Functionality
     Given I See Landing Page
     Then I Press on Login Menu
